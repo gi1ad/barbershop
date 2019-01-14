@@ -1,4 +1,4 @@
-package com.gi1ad.barbershop.controllers;
+package com.gi1ad.barbershop.controller;
 
 
 import org.springframework.stereotype.Controller;
