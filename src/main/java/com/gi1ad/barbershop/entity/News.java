@@ -1,5 +1,6 @@
 package com.gi1ad.barbershop.entity;
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -17,8 +18,10 @@ public class News {
     @Column(name = "header", nullable = false, length = 30)
     private String header;
 
-    @Column(name = "date", nullable = false)
-    private Date date;
+    @CreationTimestamp
+    @Column(name = "news_date", nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date newsDate;
 
     @Column(name = "text", nullable = false,length = 80)
     private String text;
@@ -26,6 +29,7 @@ public class News {
     public News(){
 
     }
+
 
 
 
@@ -45,12 +49,12 @@ public class News {
         this.header = header;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getNewsDate() {
+        return newsDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setNewsDate(Date newsDate) {
+        this.newsDate = newsDate;
     }
 
     public String getText() {

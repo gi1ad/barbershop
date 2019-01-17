@@ -4,22 +4,41 @@
 
 </head>
 <body>
-
+<div th:replace="fragments/header :: header"/>
 <div class="container">
-
     <div class="starter-template">
         <h1>Admin page (Spring Security protected)</h1>
         <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <div class="news-content">
+            <form action="#" th:action="@{/admin}" th:object="${news}" method="post">
+                <fieldset style="width: 400px">
+                    <div>
+                        <input type="text" th:field="${news.header}" name="newsHeader" id="newsHeader"
+                               placeholder="Заголовок новости"
+                               required="true"
+                               autofocus="true"
+                               class="form-control-inputHeader">
+                    </div>
+                    <div>
+                        <textarea name="newsText" th:field="${news.text}" id="newsText"
+                                  placeholder="Текст новости" required="true"
+                                  autofocus="true" class="form-control-inputText"
+                                  style="height: 250px">
+                        </textarea>
+
+                    </div>
+                    <div>
+                        <input type="submit" value="Добавить новость" class="btn-success"> <input type="reset"
+                                                                                                  value="reset">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
         <form th:action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>
-
     </div>
-
 </div>
-<!-- /.container -->
-
 <div th:replace="fragments/footer :: footer"/>
-
 </body>
 </html>
