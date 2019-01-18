@@ -17,19 +17,21 @@
                                placeholder="Заголовок новости"
                                required="true"
                                autofocus="true"
-                               class="form-control-inputHeader">
+                               class="form-control-inputHeader" >
                     </div>
                     <div>
-                        <textarea name="newsText" th:field="${news.text}" id="newsText"
+                        <textarea type="text" name="newsText" th:field="${news.text}" id="newsText"
                                   placeholder="Текст новости" required="true"
                                   autofocus="true" class="form-control-inputText"
                                   style="height: 250px">
                         </textarea>
-
                     </div>
                     <div>
-                        <input type="submit" value="Добавить новость" class="btn-success"> <input type="reset"
-                                                                                                  value="reset">
+                        <input le>
+                    </div>
+                    <div>
+                        <input type="submit" value="Добавить новость" class="btn-success">
+                        <input th:type="reset" value="reset">
                     </div>
                 </fieldset>
             </form>

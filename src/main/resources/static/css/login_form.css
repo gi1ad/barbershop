@@ -39,11 +39,12 @@ body#LoginForm{
     height: 50px;
     line-height: 50px;
     padding: 0;
+
 }
 .forgot {
     text-align: left; margin-bottom:30px;
 }
-.botto-text {
+.bottom-text {
     color: #ffffff;
     font-size: 14px;
     margin: auto;
@@ -51,5 +52,7 @@ body#LoginForm{
 .login-form .btn.btn-primary.reset {
     background: #ff9900 none repeat scroll 0 0;
 }
+
+
 .back { text-align: left; margin-top:10px;}
 .back a {color: #444444; font-size: 13px;text-decoration: none;}
