@@ -26,6 +26,17 @@ public class News {
     @Column(name = "text", nullable = false,length = 80)
     private String text;
 
+    @Column (name = "news_image", nullable = false)
+    private byte[] newsImage;
+
+    public byte[] getNewsImage() {
+        return newsImage;
+    }
+
+    public void setNewsImage(byte[] newsImage) {
+        this.newsImage = newsImage;
+    }
+
     public News(){
 
     }
