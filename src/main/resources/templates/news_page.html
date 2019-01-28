@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News Page</title>
+</head>
+<body>
+<div class="container">
+    <div th:if="${not #lists.isEmpty(news)}">
+        <h2> News </h2>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Header</th>
+                <th>Date</th>
+                <th>Text</th>
+                <th>Image</th>
+            </tr>
+            <tr th:each="news : ${news}">
+                <td th:text="${news.id}"></td>
+                <td th:text="${news.header}"></td>
+                <td th:text="${news.newsDate}"></td>
+                <td th:text="${news.text}"></td>
+                <td>
+
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+</div>
+</body>
+</html>
