@@ -25,7 +25,8 @@ public class News {
 
     @Column(name = "text", nullable = false,length = 80)
     private String text;
-    
+
+
     @Column (name = "news_image", nullable = false)
     private byte[] newsImage;
 

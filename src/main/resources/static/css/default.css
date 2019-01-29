@@ -1,27 +1,28 @@
 header {
-    margin-left: -10px;
-    position: relative;
-    display: block;
-    width: 105%;
+    position: sticky;
+    margin-left: -0.5em;
+    width: 100em;
     background: #3f4c6b;
     color: white;
-    height: 90px;
+    height: 6em;
     margin-top: -10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
+
+
 .logo {
-    margin-top: 30px;
+    margin-top: 35px;
     position: absolute;
     left: 15px;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
 .logo2 {
-    padding-bottom: 5px;
     text-decoration: none;
-    font-family: Open Sans, sans-serif;
     color: white;
-    font-size: 15px;
+    font-size: 1em;
 }
 
 nav,
@@ -34,7 +35,7 @@ nav ul li {
 nav {
     position: absolute;
     top: 40%;
-    right: 300px;
+    right: 15em;
 }
 
 ul li {
@@ -46,7 +47,6 @@ ul li {
 li a {
     padding: 16px;
     text-decoration: none;
-    font-family: Open Sans, sans-serif;
     color: white;
     font-size: 15px;
     line-height: normal;
@@ -74,7 +74,7 @@ p {
 
 h1 {
     font-size: 16px;
-    font-family: Open Sans, sans-serif;
+
     width: 45%;
     margin-left: 25%;
     text-align: start;

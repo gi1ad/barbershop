@@ -21,7 +21,7 @@ public class ImageController {
     @RequestMapping("/{id}")
     public void getImage(@PathVariable long id, HttpServletResponse response){
         response.setContentType("image/png");
-        News news = (News)service.getById(id);
+        News news = service.getById(id);
         if(news != null){
             try {
                 response.getOutputStream().write(news.getNewsImage());

@@ -1,17 +1,18 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-
+    <link href="/static/css/admin_default.css" rel="stylesheet" th:href="@{/css/admin_default.css}">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 </head>
 <body>
 <div th:replace="fragments/header :: header"/>
 <div class="container">
     <div class="starter-template">
         <h1>Admin page (Spring Security protected)</h1>
-        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <h2 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h2>
         <div class="news-content">
             <form action="#" th:action="@{/admin}" th:object="${news}" method="post" enctype="multipart/form-data">
-                <fieldset style="width: 400px">
+                <fieldset style="width: 400px" class="form-set">
                     <div>
                         <input type="text" th:field="${news.header}" name="newsHeader" id="newsHeader"
                                placeholder="Заголовок новости"
@@ -20,10 +21,10 @@
                                class="form-control-inputHeader">
                     </div>
                     <div>
-                        <textarea type="text" name="newsText" th:field="${news.text}" id="newsText"
+                        <textarea name="newsText" th:field="${news.text}" id="newsText"
                                   placeholder="Текст новости" required="true"
                                   autofocus="true" class="form-control-inputText"
-                                  style="height: 250px">
+                                  style="height: 250px" >
                         </textarea>
                         <input type="file" th:field="${news.newsImage}" id="fileUploadForm" autofocus="true"
                                required="true">
@@ -36,7 +37,7 @@
             </form>
         </div>
         <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
+
         </form>
     </div>
 </div>
