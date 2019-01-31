@@ -6,17 +6,17 @@
 <body>
 <div th:fragment="footer">
     <div class="container">
-        <footer>
 
-            © 2019 gi1addev.com
-            <span sec:authorize="isAuthenticated()">| Logged user: <span sec:authentication="name"></span> |
-                Roles: <span sec:authentication="principal.authorities"></span> |
-                <a th:href="@{/logout}">Sign Out</a>
-                |
-                <a th:href="@{/}">Back to main page</a>
-            </span>
+        <footer class="page-footer font-small blue">
+
+
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a> gi1addev.com</a>
+            </div>
+
 
         </footer>
+        <!-- Footer -->
 
     </div>
 

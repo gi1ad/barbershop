@@ -2,63 +2,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
-    <link href="/static/css/default.css" th:href="@{/css/default.css}" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Новости</title>
 </head>
 <header>
-<div class="logo">
-    <a class="logo2" th:href="@{/}" style="text-decoration: none "> Парикмахерский салон цирюльня </a>
-</div>
-
-<nav>
-    <ul>
-        <li class='first'>
-            <a href="#">О нас</a>
-        </li>
-        <li class='second'>
-            <a href="#">Услуги и цены</a>
-        </li>
-        <li class='third'>
-            <a href="/news">Новости</a>
-        </li>
-        <li class='four'>
-            <a href="#">Цены</a>
-        </li>
-        <li class='five'>
-            <a href="#">Контакты</a>
-        </li>
-    </ul>
-</nav>
+    <div th:replace="/fragments/navbar :: navbar"></div>
 </header>
 <body>
 <div class="container">
     <div th:if="${not #lists.isEmpty(news)}">
-        <h2> News </h2>
-        <table>
-            <tr>
-                <th>Id</th>
-                <th>Header</th>
-                <th>Date</th>
-                <th>Text</th>
-                <th>Image</th>
-            </tr>
-            <tr th:each="news : ${news}">
-                <td th:text="${news.id}"></td>
-                <td th:text="${news.header}"></td>
-                <td th:text="${news.newsDate}"></td>
-                <td th:text="${news.text}"></td>
-                <td>
-                <img th:src="@{/images/{id}(id=${news.id})}" width="300 em" height="250 em" alt="uploadImage">
-                </td>
-
-            </tr>
-
-        </table>
+        <div th:each="news : ${news}">
+            <h4> <p th:text="${news.header}"></p> </h4>
+            <p th:text="${news.text}"></p>
+            <p>
+                <img th:src="@{/images/{id}(id=${news.id})}" width="950 em" height="500 em" alt="uploadImage">
+            </p>
+            <p th:text="${news.newsDate}"></p>
+        </div>
     </div>
 </div>
-</body>
-<footer>
 
+<footer>
+    FOOOTER
 </footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
 </html>
