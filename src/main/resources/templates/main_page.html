@@ -5,22 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/static/css/footer-navbar.css" th:href="@{/css/footer-navbar.css}">
 </head>
+
     <title>Салон красоты Цирюльня - официальный сайт</title>
 <header>
-    <div th:replace="/fragments/navbar :: navbar"></div>
+    <div th:replace="/fragments/navbar :: navbar" ></div>
 </header>
 <body>
 <div class="container">
-
+Main content
 </div>
 
-<footer>
-    <div class="container">
 
-    </div>
-</footer>
+<div th:replace="/fragments/main_footer :: footer"></div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

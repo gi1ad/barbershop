@@ -38,7 +38,7 @@
             </ul>
         </div>
         <div sec:authorize="isAuthenticated()">
-            Logged user: <span sec:authentication="name">Admin</span>
+            Logged user: <span sec:authentication="name">[[${#httpServletRequest.remoteUser}]]</span>
             ||
             <a th:href="@{/logout}">Sign Out</a>
         </div>

@@ -23,7 +23,7 @@ public class News {
     @Temporal(TemporalType.TIMESTAMP)
     private Date newsDate;
 
-    @Column(name = "text", nullable = false,length = 150)
+    @Column(name = "text", nullable = false,length = 120)
     private String text;
 
 
