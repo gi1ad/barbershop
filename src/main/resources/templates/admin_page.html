@@ -15,7 +15,7 @@
 
 
         <div class="container-fluid">
-            <form action="#" th:action="@{/admin}" th:object="${news}" method="post" enctype="multipart/form-data">
+            <form action="#" th:action="@{/save}" th:object="${news}" method="post" enctype="multipart/form-data">
                 <fieldset style="width: 400px" class="form-set">
                     <div>
                         <input type="text" th:field="${news.header}" name="newsHeader" id="newsHeader"
