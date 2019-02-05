@@ -33,6 +33,13 @@ public class AdminController {
         return "redirect:" + "/admin";
     }
 
+    @GetMapping("/content")
+    public String getContent(Model model){
+        model.addAttribute("news",service.getAll());
+        return "content_page";
+    }
+
+
     @InitBinder
     public static void initBinder(HttpServletRequest request, ServletRequestDataBinder binder) throws ServletException {
         binder.registerCustomEditor(byte[].class, new ByteArrayMultipartFileEditor());
