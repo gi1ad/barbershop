@@ -19,7 +19,7 @@
             <h4> <p th:text="${news.header}"></p> </h4>
             <p th:text="${news.text}"></p>
             <p>
-                <img th:src="@{/images/{id}(id=${news.id})}" width="950 em" height="500 em" alt="uploadImage">
+                <img th:src="@{/images/{id}(id=${news.id})}" class="img-fluid" alt="Responsive image">
             </p>
             <p th:text="${news.newsDate}"></p>
         </div>

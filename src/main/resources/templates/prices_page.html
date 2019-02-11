@@ -6,50 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/footer-navbar.css" th:href="@{/css/footer-navbar.css}">
-    <title>Content</title>
 </head>
-
 <body>
-<div th:replace="fragments/header :: header"/>
+<div th:replace="/fragments/header :: header"></div>
 <div class="container">
-<div th:if="${not #lists.isEmpty(news)}">
-    <h2>Список новостей</h2>
-        <table class="table table-striped">
-            <tr>
-                <th>id</th>
-                <th>text</th>
-                <th>Удаление</th>
-            </tr>
-            <tr th:each="news : ${news}">
-                <td th:text="${news.id}"></td>
-                <td th:text="${news.text}"></td>
-                <td>
-                    <form th:action="@{/content/delete (id = ${news.id})}" th:object="${news}" method="post">
-                    <button type="submit" class="btn btn-danger"> Delete</button>
-                </form>
-                </td>
-            </tr>
+    <div class="container-fluid">
+<form action="#" th:action="@{/prices}" method="post" enctype="multipart/form-data" th:object="${prices}">
+    <h2>Добавьте файл изображения цен</h2>
+     <div class="form-group">
+         <label for ="exampleFormControlFile1"> Файл изображения цен</label>
+         <input type="file" th:field="${prices.priceImage}" class="form-control-file" id = "exampleFormControlFile1">
+     </div>
+     <div>
+         <input type="submit" class="btn btn-primary" value="Добавить цены">
+     </div>
 
-        </table>
+</form>
     </div>
 </div>
-</div>
-
-<div th:replace="fragments/main_footer :: footer"/>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+<div th:replace="/fragments/main_footer :: footer"></div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
