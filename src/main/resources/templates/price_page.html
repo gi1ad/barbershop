@@ -1,35 +1,30 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/footer-navbar.css" th:href="@{/css/footer-navbar.css}">
+    <title>Цены</title>
 </head>
+<header>
+    <div th:replace="/fragments/navbar :: navbar"></div>
+</header>
 <body>
-<div th:replace="/fragments/header :: header"></div>
 <div class="container">
-    <h2>Добавьте файл изображения цен</h2>
-    <div class="container-fluid">
-        <form action="#" th:action="@{/prices/save}" method="post" enctype="multipart/form-data" th:object="${prices}">
-            <div class="form-group">
-                <label for="exampleFormControlFile1"> Файл изображения цен</label>
-                <input type="file" th:field="${prices.priceImage}" class="form-control-file"
-                       id="exampleFormControlFile1">
-            </div>
-            <div>
-                <input type="submit" class="btn btn-primary" value="Добавить цены">
-            </div>
+    <div th:if="${not #lists.isEmpty(prices)} ">
+        <div th:each="prices : ${prices}">
 
-        </form>
+        </div>
     </div>
+    </div>
+
+
+<div th:replace="/fragments/main_footer :: footer">
+
 </div>
-
-
-<div th:replace="/fragments/main_footer :: footer"></div>
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

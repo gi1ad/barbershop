@@ -35,7 +35,7 @@ public class AdminController {
         return "admin_page";
     }
 
-    @PostMapping("/admin")
+    @PostMapping("admin/save")
     public String createNews(News news) {
         service.save(news);
         return "redirect:" + "/admin";
@@ -61,6 +61,12 @@ public class AdminController {
     public String addPrices(Model model){
         model.addAttribute("prices",new Prices());
         return "prices_page";
+    }
+
+    @PostMapping("prices/save")
+    public String savePrice(Prices prices){
+        pricesService.save(prices);
+        return "redirect:" + "/prices";
     }
 
 
