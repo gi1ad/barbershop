@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/footer-navbar.css" th:href="@{/css/footer-navbar.css}">
+    <link rel="stylesheet" href="/static/css/default.css" th:href="@{/css/default.css}">
     <title>Цены</title>
 </head>
 <header>
@@ -16,10 +17,12 @@
 <div class="container">
     <div th:if="${not #lists.isEmpty(prices)} ">
         <div th:each="prices : ${prices}">
-
+            <a href="#" th:href="@{/images/prices/{id} (id = ${prices.id})}">
+            <img src="#" th:src="@{/images/prices/{id} (id = ${prices.id})}" class="rounded float-left" alt="" height="300" width="200">
+            </a>
         </div>
     </div>
-    </div>
+</div>
 
 
 <div th:replace="/fragments/main_footer :: footer">

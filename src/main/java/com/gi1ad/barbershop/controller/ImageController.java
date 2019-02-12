@@ -38,4 +38,17 @@ public class ImageController {
 
         }
     }
+
+    @GetMapping("/prices/{id}")
+    public void getPrice(@PathVariable long id, HttpServletResponse response){
+        response.setContentType("image/png");
+        Prices prices = pricesService.getById(id);
+        if (prices != null){
+            try {
+                response.getOutputStream().write(prices.getPriceImage());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
