@@ -25,7 +25,7 @@ public class PricesServiceImpl implements PricesService {
 
 
     public void remove(long id) {
-
+        repository.deleteById(id);
     }
 
     public Prices save(Prices prices) {

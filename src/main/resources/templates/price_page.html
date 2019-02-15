@@ -15,7 +15,7 @@
 </header>
 <body>
 <div class="container">
-    <div th:if="${not #lists.isEmpty(prices)} ">
+    <div th:if="${not #lists.isEmpty(prices)}">
         <div th:each="prices : ${prices}">
             <a href="#" th:href="@{/images/prices/{id} (id = ${prices.id})}">
             <img src="#" th:src="@{/images/prices/{id} (id = ${prices.id})}" class="rounded float-left" alt="" height="300" width="200">

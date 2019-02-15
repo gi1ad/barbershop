@@ -70,6 +70,24 @@ public class AdminController {
     }
 
 
+
+    @GetMapping("/price-list")
+    public String getPricesList(Model model){
+        model.addAttribute("prices",pricesService.getAll());
+        return "price_list_page";
+    }
+
+    @PostMapping("/price-list/delete")
+    public void deletePrice(@RequestParam long id,HttpServletResponse response){
+        pricesService.remove(id);
+        try {
+            response.sendRedirect("/price-list");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     @InitBinder
     public static void initBinder(HttpServletRequest request, ServletRequestDataBinder binder) throws ServletException {
         binder.registerCustomEditor(byte[].class, new ByteArrayMultipartFileEditor());

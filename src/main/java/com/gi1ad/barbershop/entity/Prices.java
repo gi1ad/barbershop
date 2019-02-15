@@ -17,6 +17,7 @@ public class Prices {
     @Column(name = "price_image",nullable = false)
     private byte[] priceImage;
 
+
     public Prices(){
 
     }

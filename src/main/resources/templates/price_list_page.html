@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/footer-navbar.css" th:href="@{/css/footer-navbar.css}">
-    <title>Content</title>
+    <title>Price list</title>
 </head>
 
 <body>
 <div th:replace="fragments/header :: header"/>
 <div class="container">
-<div th:if="${not #lists.isEmpty(news)}">
-    <h2>Список новостей</h2>
-        <table class="table table-striped">
+    <div th:if="${not #lists.isEmpty(prices)}">
+        <h2>Список всех файлов цен</h2>
+        <table class="table">
             <tr>
                 <th>id</th>
-                <th>text</th>
                 <th>Удаление</th>
             </tr>
-            <tr th:each="news : ${news}">
-                <td th:text="${news.id}"></td>
-                <td th:text="${news.text}"></td>
+            <tr th:each="prices : ${prices}">
+                <td th:text="${prices.id}"></td>
                 <td>
-                    <form th:action="@{/content/delete (id = ${news.id})}" th:object="${news}" method="post">
-                    <button type="submit" class="btn btn-danger"> Delete</button>
-                </form>
+                    <form th:action="@{/price-list/delete (id = ${prices.id})}" th:object="${prices}" method="post">
+                        <button type="submit" class="btn btn-danger"> Delete</button>
+                    </form>
                 </td>
             </tr>
+
         </table>
     </div>
 </div>

@@ -1,5 +1,6 @@
 package com.gi1ad.barbershop.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -20,7 +21,7 @@ public class News {
 
     @CreationTimestamp
     @Column(name = "news_date", nullable = false)
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     private Date newsDate;
 
     @Column(name = "text", nullable = false,length = 120)
