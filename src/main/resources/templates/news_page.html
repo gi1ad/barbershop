@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/footer-navbar.css" th:href="@{/css/footer-navbar.css}">
+    <link rel="stylesheet" href="/static/css/navbar.css" th:href="@{/css/navbar.css}">
     <title>Новости</title>
 </head>
 <header>
@@ -19,7 +20,7 @@
             <h4> <p th:text="${news.header}"></p> </h4>
             <p th:text="${news.text}"></p>
             <p>
-                <img src="#" th:src="@{/images/{id}(id=${news.id})}" class="img-fluid" alt="Responsive image">
+                <img src="#" th:src="@{/images/{id}(id=${news.id})}" class="img-thumbnail" alt="Responsive image">
             </p>
             <p th:text="${news.newsDate}"></p>
         </div>
