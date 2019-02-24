@@ -15,9 +15,9 @@
 </header>
 <body>
 <div class="container">
-    <div th:if="${not #lists.isEmpty(news)}">
-        <div th:each="news : ${news}">
-            <h4> <p th:text="${news.header}"></p> </h4>
+    <div th:if="${not #lists.isEmpty(page)}">
+        <div th:each="news : ${page.content}">
+            <h4 th:text="${news.header}"></h4>
             <p th:text="${news.text}"></p>
             <p>
                 <img src="#" th:src="@{/images/{id}(id=${news.id})}" class="img-thumbnail" alt="Responsive image">
@@ -25,6 +25,20 @@
             <p th:text="${news.newsDate}"></p>
         </div>
     </div>
+    <nav aria-label="Page navigation example">
+        <span th:if="${page.hasPrevious()}">
+            <a th:href="@{/news(page=${page.number -1},size=${page.size})}"> Previous</a>
+        </span>
+        <th:block th:each="i: ${#numbers.sequence(0, page.totalPages - 1)}">
+            <span th:if="${page.number == i}" class="selected">[[${i}+1]]</span>
+            <span th:unless="${page.number == i}">
+             <a th:href="@{/news(page=${i},size=${page.size})}">[[${i}+1]]</a>
+        </span>
+        </th:block>
+        <span th:if="${page.hasNext()}">
+        <a th:href="@{/news(page=${page.number+1},size=${page.size})}">Next</a>
+    </span>
+    </nav>
 </div>
 
 <div th:replace="/fragments/main_footer :: footer">

@@ -18,6 +18,7 @@ import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.print.Pageable;
 import java.io.IOException;
 
 @Controller
@@ -43,7 +44,7 @@ public class AdminController {
 
     @GetMapping("/content")
     public String getContent(Model model) {
-        model.addAttribute("news", service.getAll());
+        model.addAttribute("news", service.findAll());
         return "content_page";
     }
 
