@@ -16,7 +16,7 @@ public class News {
     @GenericGenerator(name = "increment",strategy = "increment")
     private long id;
 
-    @Column(name = "header", nullable = false, length = 60 )
+    @Column(name = "header", nullable = false, length = 80 )
     private String header;
 
     @CreationTimestamp
@@ -24,7 +24,7 @@ public class News {
     @Temporal(TemporalType.DATE)
     private Date newsDate;
 
-    @Column(name = "text", nullable = false,length = 120)
+    @Column(name = "text", nullable = false,length = 200)
     private String text;
 
 

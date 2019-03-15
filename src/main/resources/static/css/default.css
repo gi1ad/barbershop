@@ -1,0 +1,15 @@
+.navbar{
+    background-color: white !important;
+    font-family: "hurme geometric sans 4 semibold",Helvetica,Arial,sans-serif;
+}
+
+.footer{
+    background-color: #2e2e2e !important;
+}
+
+.text-muted{
+    color: white !important;
+}
+body{
+    font-family: proxima-nova,Helvetica,Arial,sans-serif;
+}
