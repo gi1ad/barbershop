@@ -24,10 +24,10 @@
             <p>
                 <img src="#" th:src="@{/images/{id}(id=${news.id})}" class="img-thumbnail" alt="Responsive image">
             </p>
-            <p th:text="${news.newsDate}" style="margin-left: 63em"></p>
+            <p th:text="${news.newsDate}" style="margin-left: 63em; font-size: 15px"></p>
         </div>
     </div>
-    <nav aria-label="Page navigation example">
+    <nav aria-label="Page navigation example" th:if="${page.size == 1}" hidden>
         <span th:if="${page.hasPrevious()}">
             <a th:href="@{/news(page=${page.number -1},size=${page.size})}"> Previous</a>
         </span>

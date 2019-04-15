@@ -8,15 +8,15 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table (name = "news")
+@Table(name = "news")
 public class News {
 
     @Id
-    @GeneratedValue (generator = "increment")
-    @GenericGenerator(name = "increment",strategy = "increment")
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     private long id;
 
-    @Column(name = "header", nullable = false, length = 80 )
+    @Column(name = "header", nullable = false, length = 80)
     private String header;
 
     @CreationTimestamp
@@ -24,11 +24,11 @@ public class News {
     @Temporal(TemporalType.DATE)
     private Date newsDate;
 
-    @Column(name = "text", nullable = false,length = 200)
+    @Column(name = "text", nullable = false, length = 200)
     private String text;
 
 
-    @Column (name = "news_image", nullable = false)
+    @Column(name = "news_image", nullable = false)
     private byte[] newsImage;
 
     public byte[] getNewsImage() {
@@ -39,11 +39,9 @@ public class News {
         this.newsImage = newsImage;
     }
 
-    public News(){
+    public News() {
 
     }
-
-
 
 
     public long getId() {

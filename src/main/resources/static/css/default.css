@@ -4,12 +4,20 @@
 }
 
 .footer{
-    background-color: #2e2e2e !important;
+    background-color: #f3f3f0 !important;
+    min-height: 80px;
 }
 
 .text-muted{
-    color: white !important;
+    color: black !important;
 }
 body{
     font-family: proxima-nova,Helvetica,Arial,sans-serif;
 }
+
+.carousel-inner{
+    width: 100%;
+    max-height: 560px;
+    min-height: 490px;
+}
+

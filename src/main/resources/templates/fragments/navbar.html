@@ -3,16 +3,19 @@
 <body>
 <div th:fragment = "navbar">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#" th:href="@{/}">Парикмахерский салон "Цирюльня"</a>
+    <a class="navbar-brand" href="#" th:href="@{/}">
+        <img src="#" th:src="@{/img/logo.png}" width="170" height="60" class="d-inline-block align-top" alt="" >
+
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#" th:href="@{/news}">Новости <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link active" href="#">Услуги</a>
-            <a class="nav-item nav-link active" href="#" th:href="@{/price}">Цены</a>
-            <a class="nav-item nav-link active" href="#" th:href="@{/contacts}">Контакты</a>
+            <a class="nav-item nav-link active" href="#" th:href="@{/news}"> <strong>Новости</strong> <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" href="#"><strong>Услуги</strong></a>
+            <a class="nav-item nav-link active" href="#" th:href="@{/price}"><strong>Цены</strong></a>
+            <a class="nav-item nav-link active" href="#" th:href="@{/contacts}"><strong>Контакты</strong></a>
         </div>
     </div>
 </nav>
