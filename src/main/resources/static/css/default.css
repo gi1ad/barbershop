@@ -4,15 +4,20 @@
 }
 
 .footer{
+    padding: 7px;
+    text-align: center;
     background-color: #f3f3f0 !important;
     min-height: 80px;
 }
 
+.fa-vk{
+    font-size: 27px;
+}
 .text-muted{
-    color: black !important;
+    font-size: small;
 }
 body{
-    font-family: proxima-nova,Helvetica,Arial,sans-serif;
+
 }
 
 .carousel-inner{
