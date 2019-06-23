@@ -15,8 +15,7 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 @ComponentScan("com.gi1ad.barbershop")
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private AccessDeniedHandler accessDeniedHandler;
+
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -33,23 +32,21 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .logout()
-                .permitAll()
-                .and()
-                .exceptionHandling().accessDeniedHandler(accessDeniedHandler);
+                .permitAll();
+
 
     }
 
-    @Autowired
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("admin").password("password").roles("ADMIN");
+                .withUser("admin").password("{noop}password").roles("ADMIN");
 
     }
 
 
-    @Bean
-    public static NoOpPasswordEncoder passwordEncoder() {
-        return (NoOpPasswordEncoder) NoOpPasswordEncoder.getInstance();
-    }
+
+
+
 }

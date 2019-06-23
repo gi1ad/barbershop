@@ -5,6 +5,7 @@ import com.gi1ad.barbershop.entity.News;
 import com.gi1ad.barbershop.entity.Prices;
 import com.gi1ad.barbershop.service.NewsServiceImpl;
 import com.gi1ad.barbershop.service.PricesServiceImpl;
+import org.postgresql.util.PSQLException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.print.Pageable;
 import java.io.IOException;
+import java.sql.SQLException;
 
 @Controller
 public class AdminController {
@@ -59,27 +61,26 @@ public class AdminController {
     }
 
     @GetMapping("/prices")
-    public String addPrices(Model model){
-        model.addAttribute("prices",new Prices());
+    public String addPrices(Model model) {
+        model.addAttribute("prices", new Prices());
         return "prices_page";
     }
 
     @PostMapping("prices/save")
-    public String savePrice(Prices prices){
+    public String savePrice(Prices prices) {
         pricesService.save(prices);
         return "redirect:" + "/prices";
     }
 
 
-
     @GetMapping("/price-list")
-    public String getPricesList(Model model){
-        model.addAttribute("prices",pricesService.getAll());
+    public String getPricesList(Model model) {
+        model.addAttribute("prices", pricesService.getAll());
         return "price_list_page";
     }
 
     @PostMapping("/price-list/delete")
-    public void deletePrice(@RequestParam long id,HttpServletResponse response){
+    public void deletePrice(@RequestParam long id, HttpServletResponse response) {
         pricesService.remove(id);
         try {
             response.sendRedirect("/price-list");

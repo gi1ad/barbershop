@@ -16,15 +16,15 @@ public class News {
     @GenericGenerator(name = "increment", strategy = "increment")
     private long id;
 
-    @Column(name = "header", nullable = false, length = 80)
+    @Column(name = "header")
     private String header;
 
     @CreationTimestamp
-    @Column(name = "news_date", nullable = false)
+    @Column(name = "news_date")
     @Temporal(TemporalType.DATE)
     private Date newsDate;
 
-    @Column(name = "text", nullable = false, length = 200)
+    @Column(name = "text")
     private String text;
 
 
