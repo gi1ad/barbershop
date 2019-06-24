@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/footer-navbar.css" th:href="@{/css/footer-navbar.css}">
 </head>
 <body>
-<div th:replace="fragments/header :: header"/>
+<div th:replace="fragments/header :: header">
 <h2 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h2>
 <div class="container">
 

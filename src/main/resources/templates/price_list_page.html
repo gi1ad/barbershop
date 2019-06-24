@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div th:replace="fragments/header :: header"/>
+<div th:replace="fragments/header :: header">
 <div class="container">
     <div th:if="${not #lists.isEmpty(prices)}">
         <h2>Список всех файлов цен</h2>
