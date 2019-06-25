@@ -49,7 +49,7 @@ body {
     font-size: 1em;
 }
 
-.container-fluid {
+.strip {
 
     background-color: black;
 }
@@ -78,6 +78,7 @@ body {
 .strip{
     height: 2.5rem;
 }
+
 
 
 

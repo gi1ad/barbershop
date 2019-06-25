@@ -20,6 +20,7 @@
 </header>
 <body>
 <div class="container">
+    <div class="container-fluid">
     <div th:if="${not #lists.isEmpty(page)}">
         <div th:each="news : ${page.content}">
             <h4 th:text="${news.header}"></h4>
@@ -44,11 +45,12 @@
         <a th:href="@{/news(page=${page.number+1},size=${page.size})}">Next</a>
     </span>
     </nav>
+    </div>
 </div>
 
-<div th:replace="fragments/main_footer :: footer">
+<div th:replace="fragments/main_footer :: footer"></div>
 
-</div>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
