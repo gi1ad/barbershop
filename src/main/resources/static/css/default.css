@@ -5,6 +5,7 @@
 
 
 .footer {
+    position: absolute;
     padding: 7px;
     text-align: center;
     background-color: #f3f3f0 !important;
@@ -24,8 +25,9 @@ body {
 }
 
 .carousel-inner {
-    max-height: 70em;
+    width: 100%;
     -webkit-user-select: none;
+    height: 60rem;
 }
 
 .carousel-caption {
@@ -44,36 +46,39 @@ body {
     width: 100%;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: x-large;
+    font-size: 2rem;
 }
 
-.container-fluid2 {
-    height: 46px;
+.container-fluid {
+
     background-color: black;
 }
 
 .list-inline {
     -webkit-user-select: none;
-    padding-left: 500px;
     padding-top: 9px;
     color: white;
 
 }
 
 .list-inline-item{
-   margin-left: 13px;
+
 }
 
 .service-icon{
     float: left;
-    width: 80px;
-    margin-right: 40px;
+
 
 }
 
 .service-text{
     padding: 15px;
 }
+
+.strip{
+    height: 2.5rem;
+}
+
 
 
 
