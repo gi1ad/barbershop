@@ -80,6 +80,12 @@ body {
     height: 2.5rem;
 }
 
+@media (min-width: 576px) {
+    .map{
+        width: auto;
+    }
+}
+
 
 
 
