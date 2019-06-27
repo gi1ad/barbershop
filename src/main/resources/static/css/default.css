@@ -82,12 +82,9 @@ body {
 
  @media (min-width: 576px) and (max-width: 767.98px) {
     .map{
-       min-width: auto;
+       width: 30em;
     }
-    .carousel-inner{
-        min-height: auto;
-        min-width: auto;
-    }
+
 }
 
 
