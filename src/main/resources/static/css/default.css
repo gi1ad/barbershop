@@ -67,17 +67,22 @@ body {
 
 .service-icon{
     float: left;
-
+    display: inline;
+    padding-right: 5em;
 
 }
 
 .service-text{
-    padding: 15px;
+    padding: 2.5em;
 }
 
 .strip{
     height: 2.5rem;
 }
+
+
+
+
 
 
 
