@@ -82,9 +82,24 @@ body {
 
 @media (min-width: 576px) {
     .map{
-        width: auto;
+       min-width: auto;
+    }
+    .carousel-inner{
+        min-height: auto;
+        min-width: auto;
     }
 }
+
+@media (min-width: 768px){
+    .map{
+        min-width: auto;
+    }
+    .carousel-inner{
+        min-height: auto;
+        min-width: auto;
+    }
+}
+
 
 
 
