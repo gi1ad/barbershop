@@ -27,7 +27,7 @@
             <p>
                 <img src="#" th:src="@{/images/{id}(id=${news.id})}" class="img-thumbnail" alt="Responsive image">
             </p>
-            <p th:text="${news.newsDate}" style="margin-left: 68em; font-size: 14px"></p>
+            <p th:text="${news.newsDate}" ></p>
         </div>
     </div>
     <nav aria-label="Page navigation example" th:if="${page.size == 1}" hidden>
