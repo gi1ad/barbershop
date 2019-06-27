@@ -80,7 +80,7 @@ body {
     height: 2.5rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 600px) {
     .map{
        min-width: auto;
     }
