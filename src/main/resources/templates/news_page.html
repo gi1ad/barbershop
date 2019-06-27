@@ -19,7 +19,7 @@
 </header>
 <body>
 <div class="container">
-
+    <div class="container-fluid">
     <div th:if="${not #lists.isEmpty(page)}">
         <div th:each="news : ${page.content}">
             <h4 th:text="${news.header}"></h4>
@@ -45,7 +45,7 @@
     </span>
     </nav>
     </div>
-
+</div>
 
 <div th:replace="fragments/footer :: footer"></div>
 

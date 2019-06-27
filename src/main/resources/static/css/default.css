@@ -79,7 +79,12 @@ body {
 .strip{
     height: 2.5rem;
 }
-
+@media (min-width: 576px){
+    .img-fluid{
+       max-width: 100%;
+        height: auto;
+    }
+}
 
 
 
