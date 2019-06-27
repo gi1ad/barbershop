@@ -80,12 +80,8 @@ body {
     height: 2.5rem;
 }
 
- @media (min-width: 576px) and (max-width: 767.98px) {
-    .map{
-       width: 30em;
-    }
 
-}
+
 
 
 
