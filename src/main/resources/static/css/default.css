@@ -57,6 +57,7 @@ body {
     -webkit-user-select: none;
     padding-top: 9px;
     color: white;
+    margin-left: 21em;
 
 }
 
@@ -79,6 +80,25 @@ body {
     height: 2.5rem;
 }
 
+#slider{
+    background-color: black;
+}
+.fa-angle-down{
+    height: 2em;
+    margin-right: 50%;
+    margin-left: 50%;
+}
+#slider-body{
+    background-color: black;
+}
+
+.fa-ul{
+    color:white;
+}
+.fa-li{
+    padding: 0.3em;
+}
+
 @media (max-width: 576px) {
     .d-block {
 
@@ -99,6 +119,24 @@ body {
         width: auto;
         height: 30em;
     }
+    .strip{
+        display: none;
+    }
+
+}
+
+@media (min-width: 1200px) {
+#contacts{
+    margin-right: 30em;
+}
+  .carousel-inner{
+      height: 60em;
+  }
+
+  #slider{
+      display: none;
+  }
+
 
 }
 

@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" >
+
 <body>
-$END$
+<div th:fragment="slider" class="slider">
+    <div class="container" id="slider">
+        <i class="fas fa-angle-down" style="color: white" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        </i>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body" id="slider-body">
+                <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="far fa-clock"></i></span>Режим работы: Пн. - Вс. с 9:00-20:00</li>
+                    <li><span class="fa-li"><i class="fas fa-phone"></i></span>+7(978)004-04-38</li>
+                    <li><span class="fa-li"><i class="fab fa-viber"></i></span>+7(978)004-04-38</li>
+                    <li><span class="fa-li"><i class="fab fa-whatsapp"></i></span>+7(978)004-04-38</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
