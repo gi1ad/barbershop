@@ -81,12 +81,15 @@ body {
 }
 
 #slider{
+    -webkit-user-select: none;
     background-color: black;
+    max-width: 100%;
 }
 .fa-angle-down{
     height: 2em;
+    position: static;
     margin-right: 50%;
-    margin-left: 50%;
+    margin-left: 45%;
 }
 #slider-body{
     background-color: black;
@@ -94,9 +97,10 @@ body {
 
 .fa-ul{
     color:white;
+
 }
 .fa-li{
-    padding: 0.3em;
+
 }
 
 @media (max-width: 576px) {
@@ -123,6 +127,29 @@ body {
         display: none;
     }
 
+}
+@media (max-width: 640px ) {
+    .strip{
+        display: none;
+    }
+}
+
+@media (max-width: 840px ) {
+    .strip{
+        display: none;
+    }
+}
+@media (max-width: 1024px ) {
+    .strip{
+        display: none;
+    }
+    .map-responsive{
+        overflow:hidden;
+        padding-bottom:50.25%;
+        position:relative;
+        width: auto;
+        height: 30em;
+    }
 }
 
 @media (min-width: 1200px) {
